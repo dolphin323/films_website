@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <form action="/actors/" method="POST" enctype="multipart/form-data" >
+    Name and surname:<br>
+    <input type="text" name="name_surname" required><br>
+    Gender:<br>
+    <input type="text" name="gender" required><br>
+    Birthday:<br>
+    <input class="date" type="date" name="birthday" max=2021 min=0 required><br>
+    Height (m):<br>
+    <input type="number" name="height" step="0.01" max=3 min=0><br>
+    <input class=photo type="file" name="photo" value="Add file"><br>
+    <input class=create type="submit" value="Create">
+    </form>
+         {{>footer}}
+  </body>
+</html>

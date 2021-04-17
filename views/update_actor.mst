@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <form action="/actors/getupdate/{{id}}" method="POST" enctype="multipart/form-data" >
+    Name and surname:<br>
+    <input type="text" name="name_surname" value="{{actor.name_surname}}" required><br>
+    Gender:<br>
+    <input type="text" name="gender" value="{{actor.gender}}" required><br>
+    Birthday:<br>
+    <input class="date" type="date" name="birthday" value="{{birthday}}" max=2021 min=0 required><br>
+    Height (m):<br>
+    <input type="number" name="height" step="0.01" value="{{actor.height}}" max=3 min=0><br>
+    <input class=create type="submit" value="Update actor">
+    </form>
+         {{>footer}}
+  </body>
+</html>

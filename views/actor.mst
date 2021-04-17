@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <div class="actor_inf">
+    <div class="actor_">
+    <h1>Actor</h1>
+    <img class="actor_images" src="{{actor.media_path}}" alt="*Actor picture">
+    </div>
+    <div class="add">
+    <p>Actor <em>{{actor.name_surname}}</em></p>
+    <p>Gender <em>{{actor.gender}}</em></p>
+    <p>Birthday <em>{{birthday}}</em></p>
+    <p>Height <em>{{actor.height}}</em></p>
+    </div>
+    </div>
+    <div class="actor_buttons">
+    <form action="/actors/getupdate/{{actor._id}}" method="GET" >
+    <input class="create" type="submit" value="Update actor">
+    </form>
+    <form action="/actors/{{actor._id}}" method="POST" >
+    <input class="create" type="submit" value="Delete actor">
+    </form>
+    </div>
+    <form action="/actors/getupdatephoto/{{actor._id}}" method="GET" >
+    <input class="create" type="submit" value="Update actor photo">
+    </form>
+    {{>footer}}
+  </body>
+</html>

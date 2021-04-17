@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <div class="film_inf">
+    <div class="film_">
+    <h1>Film</h1>
+    <img class="film_images" src="{{film.media_path}}" alt="*Film picture">
+    </div>
+    <div class="add">
+    <p>Film <em>{{film.name}}</em></p>
+    <p>Genre <em>{{film.genre}}</em></p>
+    <p>Release date <em>{{film.year}}</em></p>
+    <p>Rate <em>{{film.rate}}</em></p>
+    </div>
+    </div>
+<p class="p_cast">Film cast</p>
+<table border="1">
+
+    <tr>
+    <th>NAME AND SURNAME</th>
+
+        </tr>
+        {{#actors}}
+        <tr>
+          <td><a href="/actors/{{_id}}">{{name_surname}}</a></td>
+        
+        </tr>
+        {{/actors}}
+        {{^actors}}
+          <tr><td colspan=3 style="text-align: center;">There no actors</td></tr>
+        {{/actors}}
+     </table>
+<div class="film_buttons">
+    <form action="/films/addactor/{{film._id}}" method="GET" >
+    <input class="create" type="submit" value="Add actor">
+    </form>
+    <form action="/films/deleteactor/{{film._id}}" method="GET" >
+    <input class="create" type="submit" value="Delete actor">
+    </form>
+    </div>
+    <div class="film_buttons">
+    <form action="/films/getupdate/{{film._id}}" method="GET" >
+    <input class="create" type="submit" value="Update film">
+    </form>
+    <form action="/films/delete/{{film._id}}" method="POST" >
+    <input class="create" type="submit" value="Delete film">
+    </form>
+</div>
+<form action="/films/getupdatephoto/{{film._id}}" method="GET" >
+    <input class="create" type="submit" value="Update film photo">
+    </form>
+    {{>footer}}
+  </body>
+</html>

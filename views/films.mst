@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <h1>Films</h1>
+    <form action="/films?name={{search_name}}&page={{page}}" method="GET">
+    <div>
+    Name:<br>
+    <input type="text" name="name" value={{search_name}}><br>
+    <input class="find" type="submit" value="Find">
+
+    <div class="search">
+    <p>Search for:</p>
+    <p class="search_name">{{search_name}}</p>
+    </div>
+
+    <table border="1">
+
+    <tr>
+    <th>NAME</th>
+    <th>GENRE</th>
+        </tr>
+        {{#films}}
+        <tr>
+          <td><a href="/films/{{_id}}">{{name}}</a></td>
+          <td>{{genre}}</td>
+        </tr>
+        {{/films}}
+        {{^films}}
+          <tr><td colspan=3 style="text-align: center;">There no films</td></tr>
+        {{/films}}
+     </table>
+
+     <input class="Goto" type="submit" value="Go to">
+    <input type="number" name="page" min=1 max={{max_page}}><br>
+    </div>
+
+    </form>
+
+    <div class="pagination"> 
+        <a href="/films?page={{previous_page}}&name={{search_name}}" class={{class_prev}}><< Previous</a> 
+        <a class="page">{{page}}/{{max_page}}</a>
+        <a href="/films?page={{next_page}}&name={{search_name}}" class={{class_next}}>Next >></a> 
+    </div> 
+
+    <form action="/films/new" method="GET">
+    <input class="create" type="submit" value="Create film">
+    </form>
+     {{>footer}}
+  </body>
+</html>

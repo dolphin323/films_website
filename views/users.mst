@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <h1>Users</h1>
+    <table border="1">
+    <tr>
+    <th>login</th>
+    <th>fullname</th>
+    <th>registered_at</th>
+        </tr>
+         <tr>
+        {{#users}}
+        <tr><td><a href="/users/{{_id}}">{{login}}</a></td><td><a href="/users/{{_id}}">{{fullname}}</a></td><td>{{registeredAt}}</td></tr>
+        {{/users}}
+        </tr>
+     </table>     
+     {{>footer}}
+  </body>
+</html>

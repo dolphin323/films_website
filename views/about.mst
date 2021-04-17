@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <h1>About</h1>
+  <p><b>Name</b>: Brus Liza</p>
+  <p><b>e-mail</b>: liza140620002@gmail.com</p>
+  <p><b>About</b>: You can use our site for searching, adding and deleting films</p>
+  {{>footer}}
+  </body>
+</html>

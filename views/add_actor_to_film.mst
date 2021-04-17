@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <form action="/films/addactor/{{film_id}}" method="POST" enctype="multipart/form-data" >
+    <p>Choose actor which you want to add</p>
+  <div class="select_actor">
+    <select name="actors" placeholder="Choose actor">
+ {{#actors}}
+        <option value="{{_id}}">{{name_surname}}</option>
+        {{/actors}}
+        {{^actors}}
+          <tr><td colspan=3 style="text-align: center;">There no actors</td></tr>
+        {{/actors}}
+  </select>
+   </div>
+   <div class="add_actor_to_fi">
+    <input class=create type="submit" value="Add actor">
+    </div>
+    </form>
+         {{>footer}}
+  </body>
+</html>

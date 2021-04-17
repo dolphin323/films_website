@@ -1,0 +1,12 @@
+ <!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <form action="/films/getupdatephoto/{{id}}" method="POST" enctype="multipart/form-data" >
+    <input class=photo type="file" name="photo" value="Add file"><br>
+    <input class=create type="submit" value="Update photo">
+    </form>
+         {{>footer}}
+  </body>
+</html>

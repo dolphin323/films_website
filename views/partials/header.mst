@@ -1,0 +1,16 @@
+    <div>
+    <img class="logo" src="https://res.cloudinary.com/ddr6sugne/image/upload/v1613740047/logo_fo05nz.png" alt="logo"> 
+    <h1>WOW Films</h1>
+    </div>
+    <div class="menu">
+    <nav>
+    <ul>
+    <a href="/" class="{{home_link}}" class="{{index_current}}" ><li> Home </li></a>
+    <a href="/users" class="{{user_link}}" class="{{user_current}}"><li> Users </li></a>
+    <a href="/films" class="{{film_link}}" class="{{film_current}}"><li> Films </li></a>
+    <a href="/actors" class="{{actor_link}}" class="{{actor_current}}"><li> Actors </li></a>
+    <a href="/about" class="{{about_link}}" class="{{about_current}}"><li> About </li></a>
+    </ul>
+    </nav>
+    </div>
+    <hr>

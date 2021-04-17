@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <h1>User</h1>
+    <img class="user_images" src="{{user.avaUrl}}" alt="User picture">
+    <p>{{user.fullname}}</p>
+    <p>({{user.login}}) {{registeredAt}}</p>
+    <p class="Bio"> {{user.Bio}}</p>
+    <p class="user_f">All {{user.fullname}}`s films</p>
+       <table border="1">
+
+    <tr>
+    <th>NAME</th>
+    <th>GENRE</th>
+        </tr>
+        {{#films}}
+        <tr>
+          <td><a href="/films/{{_id}}">{{name}}</a></td>
+          <td>{{genre}}</td>
+        </tr>
+        {{/films}}
+        {{^films}}
+          <tr><td colspan=3 style="text-align: center;">There no films</td></tr>
+        {{/films}}
+     </table>
+     <div class="user_buttons">
+    <form action="/users/addfilm/{{user._id}}" method="GET">
+    <input class="create" type="submit" value="Add film">
+    </form>
+      <form action="/users/deletefilm/{{user._id}}" method="GET">
+    <input class="create" type="submit" value="Delete film">
+    </form>
+    </div>
+    {{>footer}}
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <h1>WOW Films</h1>
+    <p class="home_text">Let's start explore film world together</p>
+    <div class="home_images">
+    <img class="photo1" src="https://res.cloudinary.com/ddr6sugne/image/upload/v1613739677/index1_fenhhq.jpg" alt="*Home picture">  <img class="photo" src="https://res.cloudinary.com/ddr6sugne/image/upload/v1613739692/index2_nicaya.jpg" alt="*Home picture"> <img class="photo" src="https://res.cloudinary.com/ddr6sugne/image/upload/v1613739707/index3_a55q4d.jpg" alt="*Home picture"> <img class="photo" src="https://res.cloudinary.com/ddr6sugne/image/upload/v1613739710/index4_c4sjsb.jpg" alt="*Home picture"> 
+    </div>
+    {{>footer}}
+  </body>
+</html>

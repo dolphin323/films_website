@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    {{>header}}
+    <form action="/films/getupdate/{{id}}" method="POST" enctype="multipart/form-data" >
+    First name:<br>
+    <input type="text" name="name" value="{{film.name}}" required><br>
+    Genre:<br>
+    <input type="text" name="genre" value="{{film.genre}}"  required><br>
+    Release date:<br>
+    <input class="date" type="date" name="year" value="{{film.year}}" max=2030 min=0 required><br>
+    Rate:<br>
+    <input type="number" name="rate" value="{{film.rate}}" max=10 min=0 required><br>
+    <input class=create type="submit" value="Update">
+    </form>
+         {{>footer}}
+  </body>
+</html>
